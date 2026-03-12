@@ -1,0 +1,13 @@
+# 八皇后问题求解器
+## 项目结构
+- `src/queen_solver.py`: 核心算法实现（回溯法）
+- `tests/test_queen_solver.py`: 单元测试
+## 实现思路
+采用回溯法逐行放置皇后，通过 `col_used`、`diag1_used`、`diag2_used` 三个布尔数组快速判断位置是否合法，避免逐行检查冲突，提升效率。
+## 运行与测试
+1.  进入 `hw01` 目录
+2.  执行测试命令：
+    ```bash
+    pytest tests/test_queen_solver.py -v
+    ```
+3.  预期输出：两个测试用例全部通过（`PASSED`）。
