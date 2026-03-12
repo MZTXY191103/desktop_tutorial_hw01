@@ -1,0 +1,15 @@
+# AI 编程辅助交互日志
+
+## 1. 需求描述与代码生成
+**Prompt**: 
+"请用 Python 编写一个通用的 N 皇后问题求解器，使用回溯法。需要包含 src/queen_solver.py，实现 solve_n_queens(n) 函数，返回所有合法的棋盘布局列表。请遵循 Python 工程规范，代码要简洁高效。"
+
+**AI 回复内容核心**：
+实现了基于回溯法的解法，使用 `col_used`, `diag1_used`, `diag2_used` 三个数组进行剪枝，时间复杂度 $O(n!)$，空间复杂度 $O(n)$。
+
+## 2. Bug 发现与修复过程
+**操作**：故意在代码中引入 Bug，将副对角线判断条件 `diag2_used[d2]` 误写为 `diag1_used[d2]`。
+
+**报错日志**：
+```text
+AssertionError: 9 != 92
